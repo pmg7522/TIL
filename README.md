@@ -10,3 +10,5 @@
 ## AWS
 ## Docker
 ## IP 체계
+## NestJS
+## Database
