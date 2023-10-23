@@ -9,6 +9,8 @@ docker pull ubuntu:latest
 docker pull ubuntu
 ```
 
+---
+
 ### 2. 컨테이너 생성
 
 ```
@@ -17,6 +19,8 @@ docker run [옵션] [이미지] [명령어] [인자]
 // 예시
 docker run -it --name test ubuntu:latest bash
 ```
+
+| 위 cli를 입력 시 컨테이너로 접속되는데, exit로 컨테이너를 나오면 자동으로 실행이 중지되기 때문에 이후에 실행 작업을 거친다.
 
 #### 옵션 종류
 
@@ -29,7 +33,19 @@ docker run -it --name test ubuntu:latest bash
 | --rm                  | 컨테이너가 종료될 때 자동으로 삭제                                 |
 | -p <br> --publish     | 호스트와 컨테이너의 포트 연결 (포트포워딩)                         |
 
-// TODO: 이미지, 명령어, 인자
+#### 이미지란?
+
+소스 코드, 라이브러리, 종속성, 도구 및 응용 프로그램을 실행하는데 필요한 기타 파일을 포함하는 불변 파일이다.
+
+```
+// 이미지 이름 양식
+[저장소 이름]/[이미지 이름]:[태그]
+
+// 예시
+mdock/my-app:tagname
+```
+
+---
 
 ### 3. 컨테이너 실행
 
@@ -40,6 +56,8 @@ docker start [컨테이너 ID 혹은 컨테이너 이름]
 docker start test
 ```
 
+---
+
 ### 4. 컨테이너 접속
 
 ```
@@ -48,3 +66,5 @@ docker exec -it [컨테이너 ID 혹은 컨테이너 이름]
 // 예시
 docker exec -it test bash
 ```
+
+---
